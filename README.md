@@ -24,6 +24,7 @@ A simple and clean to-do list application built with HTML, CSS, and JavaScript. 
 ```bash
 git clone https://github.com/your-username/todo-list-app.git
 cd todo-list-app
+```
 
 ## 🚀 Getting Started
 
