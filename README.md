@@ -54,7 +54,7 @@ Below is the initial wireframe created in Balsamiq:
 
 ## 🌐 Live Demo
 
-[View on GitHub Pages](https://yourusername.github.io/todo-list-app)
+[View on GitHub Pages](https://jordanveness.github.io/todo-list-app)
 
 ## 📄 License
 

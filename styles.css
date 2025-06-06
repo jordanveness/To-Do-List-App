@@ -42,6 +42,7 @@ footer {
     height: auto;
     width: 500px;
     border: #333 solid 1px;
+    min-height: 50px;;
 }
 #new-task {
     flex: 1;
@@ -51,6 +52,10 @@ footer {
 }
 li {
     list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 #tasks li:nth-child(odd) {
     background-color: #f0f0f0;
@@ -59,7 +64,7 @@ li {
 #tasks li:nth-child(even) {
     background-color: #ffffff;
 }
-li.completed {
+span.completed {
     text-decoration: line-through;
     opacity: 0.3
 }

@@ -10,20 +10,47 @@ function addTask() {
 
     if (taskText !== '') {
         const taskItem = document.createElement('li');
-        taskItem.textContent = taskText;
-        taskItem.addEventListener('click', () => {
-            taskItem.classList.toggle('completed');
-            console.log(taskItem.classList); // Logs the current classes applied to the taskItem
+
+        const taskSpan = document.createElement('span');
+        taskSpan.textContent = taskText;
+
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Edit';
+
+        taskSpan.addEventListener('click', () => {
+            taskSpan.classList.toggle('completed');
         });
-        taskItem.addEventListener('dblclick', () => {
+
+        taskSpan.addEventListener('dblclick', () => {
             tasksList.removeChild(taskItem);
         });
+
+        editButton.addEventListener('click', () => {
+            const newText = document.createElement('input');
+            newText.type = 'text';
+            newText.value = taskSpan.textContent;
+            taskItem.replaceChild(newText, taskSpan);
+            newText.focus();
+            newText.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    taskSpan.textContent = newText.value;
+                    taskItem.replaceChild(taskSpan, newText);
+                }
+            });
+        });
+        // Append children first
+        taskItem.appendChild(taskSpan);
+        taskItem.appendChild(editButton);
+
+        // Then append to the task list
         tasksList.appendChild(taskItem);
+
         newTaskInput.value = '';
     } else {
         alert('Please enter a task!');
     }
 }
+
 
 // Add an event listener to the button
 addTaskButton.addEventListener('click', addTask);
