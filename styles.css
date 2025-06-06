@@ -49,3 +49,6 @@ footer {
 #add-task-btn {
     width: 20%;
 }
+li {
+    list-style-type: none;
+}
