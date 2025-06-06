@@ -15,6 +15,9 @@ function addTask() {
             taskItem.classList.toggle('completed');
             console.log(taskItem.classList); // Logs the current classes applied to the taskItem
         });
+        taskItem.addEventListener('dblclick', () => {
+            tasksList.removeChild(taskItem);
+        });
         tasksList.appendChild(taskItem);
         newTaskInput.value = '';
     } else {
