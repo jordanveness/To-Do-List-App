@@ -1,0 +1,51 @@
+/* Simple reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+}
+header {
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    text-align: right;
+    padding: 10px 20px;
+}
+#task-input {
+    width: 500px;
+    display: flex;  
+    margin-bottom: 10px;
+}
+#task-list {
+    height: 500px;
+    width: 500px;
+    border: #333 solid 1px;
+}
+#new-task {
+    flex: 1;
+}
+#add-task-btn {
+    width: 20%;
+}
