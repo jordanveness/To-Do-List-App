@@ -39,7 +39,7 @@ footer {
     margin-bottom: 10px;
 }
 #task-list {
-    height: 500px;
+    height: auto;
     width: 500px;
     border: #333 solid 1px;
 }
@@ -51,4 +51,15 @@ footer {
 }
 li {
     list-style-type: none;
+}
+#tasks li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+#tasks li:nth-child(even) {
+    background-color: #ffffff;
+}
+li.completed {
+    text-decoration: line-through;
+    opacity: 0.3
 }
