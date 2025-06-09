@@ -15,6 +15,7 @@ function addTask() {
         taskSpan.textContent = taskText;
 
         const editButton = document.createElement('button');
+        editButton.classList.add('edit-btn');
         editButton.innerHTML = '<i class="fas fa-edit"></i>';
 
         taskSpan.addEventListener('click', () => {

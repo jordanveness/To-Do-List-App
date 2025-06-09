@@ -76,3 +76,25 @@ span.completed {
     text-decoration: line-through;
     opacity: 0.3
 }
+button.edit-btn {
+    border: none;
+}
+button.edit-btn:hover {
+    background-color: #e0e0e0;
+    border: #333 solid 1px;
+    cursor: pointer;
+}
+button.edit-btn:active {
+    background-color: #d0d0d0;
+}
+header {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    background-color: #7091e6;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
