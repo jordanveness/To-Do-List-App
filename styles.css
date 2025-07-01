@@ -1,25 +1,24 @@
-/* Simple reset */
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #7091e6 ,#ede8f5);
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 600;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #7091e6, #ede8f5);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Layout styles */
 main {
     flex: 1;
     display: flex;
@@ -33,6 +32,8 @@ footer {
     text-align: right;
     padding: 10px 20px;
 }
+
+/* Task input styles */
 #task-input {
     width: 500px;
     display: flex;
@@ -42,20 +43,25 @@ footer {
     position: sticky;
     top: 10px;
 }
-#task-list {
-    height: auto;
-    width: 500px;
-    border: #333 solid 1px;
-    min-height: 50px;
-    background-color: #f0f0f0;
-}
+
 #new-task {
     flex: 1;
     padding: 10px;
 }
+
 #add-task-btn {
     width: 20%;
 }
+
+/* Task list styles */
+#task-list {
+    width: 500px;
+    border: 1px solid #333;
+    min-height: 50px;
+    background-color: #f0f0f0;
+}
+
+/* List item styles */
 li {
     list-style-type: none;
     display: flex;
@@ -63,6 +69,7 @@ li {
     align-items: center;
     padding: 10px;
 }
+
 #tasks li:nth-child(odd) {
     background-color: #f0f0f0;
 }
@@ -70,18 +77,24 @@ li {
 #tasks li:nth-child(even) {
     background-color: #ffffff;
 }
+
+/* Completed task styles */
 span.completed {
     text-decoration: line-through;
-    opacity: 0.3
+    opacity: 0.3;
 }
+
+/* Button styles */
 button.edit-btn {
     border: none;
-}
-button.edit-btn:hover {
-    background-color: #e0e0e0;
-    border: #333 solid 1px;
     cursor: pointer;
 }
+
+button.edit-btn:hover {
+    background-color: #e0e0e0;
+    border: 1px solid #333;
+}
+
 button.edit-btn:active {
     background-color: #d0d0d0;
 }
