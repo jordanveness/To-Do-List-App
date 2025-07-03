@@ -19,6 +19,10 @@ function addTask() {
         editButton.classList.add('edit-btn');
         editButton.innerHTML = '<i class="fas fa-edit"></i>';
 
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add('delete-btn');
+        deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+
         // Add event listener to toggle the completed class on taskSpan
         taskSpan.addEventListener('click', () => {
             taskSpan.classList.toggle('completed');
@@ -47,9 +51,14 @@ function addTask() {
             });
         });
 
+        deleteButton.addEventListener('click', () => {
+            tasksList.removeChild(taskItem);
+        });
+
         // Append taskSpan and editButton to taskItem, then append taskItem to tasksList
         taskItem.appendChild(taskSpan);
         taskItem.appendChild(editButton);
+        taskItem.appendChild(deleteButton);
         tasksList.appendChild(taskItem);
 
         // Clear the input field after adding the task

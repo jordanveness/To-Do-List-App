@@ -63,10 +63,9 @@ footer {
 
 /* List item styles */
 li {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between text and buttons */
+    align-items: center; /* Align items vertically */
     padding: 10px;
 }
 
@@ -78,23 +77,37 @@ li {
     background-color: #ffffff;
 }
 
+/* Task text styles */
+li span {
+    flex: 1; /* Allow the text to take up available space */
+    text-align: left; /* Align text to the left */
+}
+
+/* Button container styles */
+li button {
+    margin-left: 10px; /* Add spacing between buttons */
+}
+
 /* Completed task styles */
 span.completed {
     text-decoration: line-through;
     opacity: 0.3;
 }
 
-/* Button styles */
-button.edit-btn {
+/* Shared button styles */
+button.task-btn {
     border: none;
     cursor: pointer;
 }
 
-button.edit-btn:hover {
+/* Hover and active states for edit button */
+button.edit-btn:hover,
+button.delete-btn:hover {
     background-color: #e0e0e0;
     border: 1px solid #333;
 }
 
-button.edit-btn:active {
+button.edit-btn:active,
+button.delete-btn:active {
     background-color: #d0d0d0;
 }
