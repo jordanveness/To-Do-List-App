@@ -86,6 +86,8 @@ li span {
 /* Button container styles */
 li button {
     margin-left: 10px; /* Add spacing between buttons */
+    border: none;
+    background: none;
 }
 
 /* Completed task styles */
